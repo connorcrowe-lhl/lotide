@@ -13,11 +13,14 @@ const tail = function(array) {
 const test1 = tail(['a', 'b']);
 assertEqual(test1[0], 'b')
 
-const test2 = tail(['Hello', 'Lighthouse', 'Labs']);
-assertEqual(test2.length, 2);
+const test2 = tail([]);
+assertEqual(test2.length, 0);
 
-const empty = tail([1]);
-assertEqual(empty.length, 0);
+const test3 = tail([1]);
+assertEqual(test3.length, 0);
+
+const test4 = tail(['Hello', 'Lighthouse', 'Labs']);
+assertEqual(test4.length, 2);
 
 const words = ['Yo yo', 'Lighthouse', 'Labs'];
 tail(words);
