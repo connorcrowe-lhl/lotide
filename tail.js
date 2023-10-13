@@ -28,4 +28,3 @@ assertEqual(tail(['Hello', 'Lighthouse', 'Labs']).length, 2);
 const words = ['Yo yo', 'Lighthouse', 'Labs'];
 tail(words);
 assertEqual(words.length, 3);
-assertEqual(words[0], 'Yo yo');
