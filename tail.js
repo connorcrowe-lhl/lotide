@@ -11,22 +11,18 @@ const tail = function(array) {
 };
 
 // Empty array
-const empty = tail([]);
-assertEqual(empty.length, 0);
+assertEqual(tail([]).length, 0);
 
 // Arr len 1
-const len1 = tail([1]);
-assertEqual(len1.length, 0);
+assertEqual(tail([1]).length, 0);
 
 // Arr len 2
-const len2 = tail(['a', 'b']);
-assertEqual(len2[0], 'b');
-assertEqual(len2.length, 1);
+assertEqual(tail(['a', 'b'])[0], 'b');
+assertEqual(tail(['a', 'b']).length, 1);
 
 // Arr len 3
-const len3 = tail(['Hello', 'Lighthouse', 'Labs']);
-assertEqual(len3[0], 'Lighthouse');
-assertEqual(len3.length, 2);
+assertEqual(tail(['Hello', 'Lighthouse', 'Labs'])[0], 'Lighthouse');
+assertEqual(tail(['Hello', 'Lighthouse', 'Labs']).length, 2);
 
 // Orignial array unmodified
 const words = ['Yo yo', 'Lighthouse', 'Labs'];
