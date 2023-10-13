@@ -7,18 +7,25 @@ const assertEqual = function(actual, expected) {
 };
 
 const tail = function(array) {
-  return array[array.length];
+  return array.slice(1);
 };
 
-const test1 = tail(['a', 'b']);
-assertEqual(test1, 'b')
+// Empty array
+assertEqual(tail([]).length, 0);
 
-const result = tail(['Hello', 'Lighthouse', 'Labs']);
-assertEqual(result.length, 2);
+// Arr len 1
+assertEqual(tail([1]).length, 0);
 
-const empty = tail([1]);
-assertEqual(empty, 0);
+// Arr len 2
+assertEqual(tail(['a', 'b'])[0], 'b');
+assertEqual(tail(['a', 'b']).length, 1);
 
+// Arr len 3
+assertEqual(tail(['Hello', 'Lighthouse', 'Labs'])[0], 'Lighthouse');
+assertEqual(tail(['Hello', 'Lighthouse', 'Labs']).length, 2);
+
+// Orignial array unmodified
 const words = ['Yo yo', 'Lighthouse', 'Labs'];
 tail(words);
 assertEqual(words.length, 3);
+assertEqual(words[0], 'Yo yo');
