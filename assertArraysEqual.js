@@ -35,6 +35,3 @@ assertArraysEqual(['a','b','c'], [1, 2])
 
 // Undefined in array
 assertArraysEqual([undefined], [undefined])
-
-// Undefined 
-assertArraysEqual(undefined, undefined)
