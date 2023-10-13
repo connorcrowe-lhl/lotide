@@ -10,19 +10,18 @@ const tail = function(array) {
   return array.slice(1);
 };
 
-// Empty array
-assertEqual(tail([]).length, 0);
+const test1 = tail(['a', 'b']);
+assertEqual(test1[0], 'b')
 
-// Arr len 1
-assertEqual(tail([1]).length, 0);
+const test2 = tail([]);
+assertEqual(test2.length, 0);
 
-// Arr len 2
-assertEqual(tail(['a', 'b']).length, 1);
+const test3 = tail([1]);
+assertEqual(test3.length, 0);
 
-// Arr len 3
-assertEqual(tail(['Hello', 'Lighthouse', 'Labs'])[0], 'Lighthouse');
+const test4 = tail(['Hello', 'Lighthouse', 'Labs']);
+assertEqual(test4.length, 2);
 
-// Orignial array unmodified
 const words = ['Yo yo', 'Lighthouse', 'Labs'];
 tail(words);
 assertEqual(words.length, 3);
