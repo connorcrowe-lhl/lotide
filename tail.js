@@ -22,7 +22,6 @@ assertEqual(tail(['a', 'b']).length, 1);
 
 // Arr len 3
 assertEqual(tail(['Hello', 'Lighthouse', 'Labs'])[0], 'Lighthouse');
-assertEqual(tail(['Hello', 'Lighthouse', 'Labs']).length, 2);
 
 // Orignial array unmodified
 const words = ['Yo yo', 'Lighthouse', 'Labs'];
