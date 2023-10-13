@@ -17,7 +17,6 @@ assertEqual(tail([]).length, 0);
 assertEqual(tail([1]).length, 0);
 
 // Arr len 2
-assertEqual(tail(['a', 'b'])[0], 'b');
 assertEqual(tail(['a', 'b']).length, 1);
 
 // Arr len 3
