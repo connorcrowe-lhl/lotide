@@ -10,9 +10,9 @@ const eqArrays = function(array1, array2) {
 
 const assertArraysEqual = function(array1, array2) {
   if (eqArrays(array1, array2)) {
-    console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
+    console.log(`✅✅✅ Assertion Passed: ${array1} === ${array2}`);
   } else {
-    console.log(`🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`);
+    console.log(`🛑🛑🛑 Assertion Failed: ${array1} !== ${array2}`);
   }
 };
 
@@ -20,7 +20,12 @@ const assertArraysEqual = function(array1, array2) {
 assertArraysEqual([], [])
 // One empty array
 assertArraysEqual([1,2,3], [])
+
 // Same integers
 assertArraysEqual([1,2,3], [1,2,3])
 // Diff integers
 assertArraysEqual([1,2,3], [1,3])
+// Same strings
+assertArraysEqual(['a','b','c'], ['a','b','c'])
+// Diff strings
+assertArraysEqual(['a','b','c'], ['a','b'])
