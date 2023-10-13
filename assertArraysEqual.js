@@ -1,7 +1,7 @@
 const eqArrays = function(array1, array2) {
   if (array1.length !== array2.length) return false;
   for (let i = 0; i < array1.length; i+=1) {
-    if (array1[i] === array2[i]) {
+    if (array1[i] !== array2[i]) {
       return false
     }
   }
@@ -17,7 +17,7 @@ const assertArraysEqual = function(array1, array2) {
 };
 
 // Two empty arrays
-assertArraysEqual([1,2,3], [])
+assertArraysEqual([], [])
 // One empty array
 assertArraysEqual([1,2,3], [])
 
@@ -29,3 +29,12 @@ assertArraysEqual([1,2,3], [1,3])
 assertArraysEqual(['a','b','c'], ['a','b','c'])
 // Diff strings
 assertArraysEqual(['a','b','c'], ['a','b'])
+
+// Diff data types
+assertArraysEqual(['a','b','c'], [1, 2])
+
+// Undefined in array
+assertArraysEqual([undefined], [undefined])
+
+// Undefined 
+assertArraysEqual(undefined, undefined)
